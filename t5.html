@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gupta Provisions</title>
+  <link rel="stylesheet" href="t4c.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    Gupta Provisions
+  </header>
+
+  <nav class="category-bar">
+    <a href="all.html" class="category-link">All</a>
+    <a href="Sanitary.html" class="category-link">Sanitary</a>
+    <a href="Beverages.html" class="category-link">Beverages</a>
+    <a href="Snacks.html" class="category-link">Snacks</a>
+    <a href="Essentials.html" class="category-link">Daily Essentials</a>
+    <a href="pooja.html" class="category-link">Pooja Material</a>
+    <a href="dairy.html" class="category-link">Dairy Products</a>
+    <a href="dry.html" class="category-link">Dry fruits</a>
+    <div class="cart-icon">
+  </nav>
+  
+
+
+  <!-- Flash Offers (Slideshow) -->
+  <section class="section offers">
+    <h2 class="section-title">Latest Offers</h2>
+    <div class="offer-card" id="offerText">Loading offers...</div>
+  </section>
+
+  <!-- Most Bought Products with Image -->
+  <section class="section">
+    <h2 class="section-title">Most Bought Products</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="./amul_milk.webp" alt="Amul Milk" class="product-img">
+        <p>Amul Milk 1L</p>
+        <p>₹62</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="./surf_excel.jpeg" alt="Surf Excel Detergent" class="product-img">
+        <p>Surf Excel Detergent</p>
+        <p>₹50</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="./parle g.webp" alt="Parle-G Biscuits" class="product-img">
+        <p>Parle-G Biscuits</p>
+        <p>₹20</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>     
+      <div class="card">
+        <img src="./maggi.png" alt="Maggi Noodles" class="product-img">
+        <p>Maggi Noodles</p>
+        <p>₹15</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="./tea.jpg" alt="Tea" class="product-img">
+        <p>Tea</p>
+        <p>₹200</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="./hide.jpeg" alt="Hide and Seek" class="product-img">
+        <p>Hide and Seek</p>
+        <p>₹30</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>      
+    </div>
+  </section>
+
+  <!-- Request a Product -->
+  <section class="section light-bg">
+    <h2 class="section-title">Request a Product</h2>
+    <form class="form" id="requestForm">
+      <input type="text" placeholder="Your Name" class="input" required>
+      <input type="text" placeholder="Product You Want" class="input" required>
+      <textarea placeholder="Additional Details (optional)" class="input textarea"></textarea>
+      <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+    <!-- Success message (Initially hidden) -->
+    <div id="successMessage" style="display: none; color: green; font-size: 1.2rem; text-align: center;">
+      <p>Request Sent! We will get back to you soon.</p>
+      <!-- Button to request again -->
+      <button id="requestAgainBtn" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+        Request Again
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Email: guptaprovisions@example.com</p>
+    <p>Phone: +91-9876543210</p>
+    <p>Instagram: @guptaprovisions</p>
+  </footer>
+
+  <!-- JavaScript for Request Form and Slideshow -->
+  <script>
+    // Show next offer in the slideshow
+    const offers = [
+      "10% off on Beverages!",
+      "Buy 1 Get 1 Free on Selected Snacks!",
+      "Flat ₹50 off on purchases above ₹500!",
+      "Free delivery on orders above ₹299!",
+      "20% off on all cleaning products!"
+    ];
+
+    let index = 0;
+    const offerText = document.getElementById('offerText');
+
+    function showNextOffer() {
+      offerText.textContent = offers[index];
+      index = (index + 1) % offers.length;
+    }
+
+    showNextOffer();
+    setInterval(showNextOffer, 3000);
+
+    // JavaScript to show "Request Sent" message after form submission
+    document.getElementById('requestForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent form submission
+      // Hide the form and show the success message
+      document.getElementById('requestForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+    });
+
+    // Show the form again when "Request Again" button is clicked
+    document.getElementById('requestAgainBtn').addEventListener('click', function() {
+      document.getElementById('requestForm').style.display = 'block'; // Show the form
+      document.getElementById('successMessage').style.display = 'none'; // Hide the success message
+      document.getElementById('requestForm').reset(); // Reset the form fields
+    });
+  </script>
+
+</body>
+</html>
