@@ -1,74 +1,58 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .header {
-    background-color: #2d6a4f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .barcode-img {
-    max-width: 250px;
-    height: auto;
-    margin-bottom: 20px;
-    border: 4px solid #2d6a4f;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .number {
-    font-size: 1.4rem;
-    margin: 10px 0;
-    color: #333;
-    font-weight: 600;
-  }
-  
-  .instruction {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  .footer {
-    background-color: #2d6a4f;
-    color: white;
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .footer a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  .pay-text {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2e7d32;
-    text-align: center;
-  }
-    
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.header {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.pay-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.barcode-img {
+  width: 220px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.instruction {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.footer {
+  background-color: #2d6a4f;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
